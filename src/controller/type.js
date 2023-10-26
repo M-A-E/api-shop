@@ -24,4 +24,6 @@ const create = async (req, res) => {
     }
 };
 
-exports.typeController = create
+exports.typeController = {
+    create
+}

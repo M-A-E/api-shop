@@ -5,6 +5,7 @@ const auth = require("../middlewares/authentication");
 const profile = require("../../models/profile");
 const { productController } = require("../controller/products");
 const { categoriesController } = require("../controller/categories");
+const { typeController } = require("../controller/type");
 const route = express.Router();
 
 // product
@@ -13,6 +14,8 @@ route.post("/products", productController.create);
 route.get("/products/:id", productController.getDetail);
 route.delete("/products/:id", productController.deleteProduct);
 route.post("/products/:id", productController.updateDataProduct);
+// type
+route.get("/type", typeController.create);
 // categories
 route.get("/categories", categoriesController.getAll);
 route.post("/categories", categoriesController.create);
